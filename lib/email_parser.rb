@@ -10,8 +10,8 @@ class EmailAddressParser
   end
   
   def parse
-
-    email_bank = @emails.split(", ")  
+    delimiters = [', ', ' ', "'"]
+    email_bank = @emails.split(Regexp.union(delimiters))  
     email_bank.uniq
   end
 end
