@@ -11,7 +11,7 @@ class EmailAddressParser
   
   def parse
 
-    email_bank = @emails.split(",")  
+    email_bank = @emails.split(", ")  
     email_bank.uniq
   end
 end
